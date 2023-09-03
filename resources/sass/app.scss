@@ -1,0 +1,299 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+// Variables
+@import 'variables';
+$font: 16px;
+$card_bg: #f9f6f6;
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css";
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    width: auto;
+}
+.card {
+    background: #fff;
+}
+
+// Staff
+* {
+    outline: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.tr-3 {
+    transition: all 0.3ms;
+}
+
+.card-content {
+    min-height: 600px;
+    background: $card_bg;
+    box-shadow: 0 4px 16px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    .nav-link {
+        color: #a5a5a5;
+    }
+
+    .nav-link.active {
+        color: #000000;
+        font-weight: 600;
+        background: $card_bg;
+    }
+}
+
+// Body
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, 'sans-serif';
+    font-size: $font;
+}
+
+// Header
+header {
+    margin-left: 360px;
+    background: #BB8965;
+
+    .head-menu {
+        .nav {
+            height: 82px;
+            justify-content: flex-end;
+
+            li a {
+                padding: 0 36px;
+                height: 100%;
+                border: solid #B37E57;
+                border-width: 0 1px;
+                color: #fff;
+                margin: 0 0.30px;
+            }
+
+            li a:hover {
+                text-decoration: none;
+                background: #ec985c;
+            }
+
+            li a img {
+                margin-right: 13px;
+            }
+        }
+    }
+}
+
+// NavBar
+#left-bar {
+    width: 360px;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    .logo {
+        text-align: center;
+        margin: 20px 0 40px;
+    }
+
+    ul {
+        margin: 0 27px;
+
+        .nav-item:first-child {
+            border-top: 1px solid #252525;
+        }
+
+        .nav-item {
+            border-bottom: 1px solid #252525;
+
+            .nav-link {
+                color: #FFF;
+                position: relative;
+                transition: margin-left 0.3s;
+            }
+
+            .nav-link:not(.active):hover {
+                margin-left: 15px;
+            }
+
+            .nav-link.active {
+                font-weight: 600;
+                padding-left: 30px;
+            }
+
+            .nav-link.active:before {
+                content: ".";
+                position: absolute;
+                font-size: 37px;
+                font-weight: 600;
+                left: 13px;
+                top: -19px;
+            }
+        }
+    }
+
+}
+
+// Content
+#app {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #E5E5E5;
+    overflow: hidden;
+}
+
+#content {
+    margin-left: 360px;
+}
+
+// Auth
+#auth {
+    background-color: #000;
+    min-height: 100vh;
+
+    .auth-wrapper {
+        max-width: 460px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        .auth-form {
+            .form-box {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                .restore-password {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+
+                label {
+                    color: #fff;
+                }
+
+                input {
+                    background: #1E1E1E;
+                    border: 1px solid #7B7B7B;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    padding: 25px 10px;
+                    color: #FFF;
+                }
+
+                input:focus {
+                    box-shadow: 0 0 20px 3px rgba(220, 202, 52, 0.25);
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 30px #1E1E1E inset !important;
+                }
+
+                input:-webkit-autofill {
+                    -webkit-text-fill-color: #fff !important;
+                }
+            }
+
+            .auth-btn {
+                color: #fff;
+                max-width: 255px;
+                width: 100%;
+                padding: 14px 0;
+                text-align: center;
+                background: #BB8964;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+// Stores
+
+
+// Categories
+
+.main-table {
+    border: 1px solid #CACACA;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #fff;
+
+    td, th {
+        border: 1px solid #CACACA;
+        vertical-align: middle;
+    }
+}
+
+// Products
+
+.image-box {
+
+    img {
+        max-width: 300px;
+        width: 100%;
+    }
+}
+.options-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+// Pagination
+
+.pagination {
+    text-align: center;
+    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.05);
+
+    li {
+        width: 35px;
+        height: 35px;
+        margin: 0 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #E7E9EA;
+        background: #fff;
+        color: #737B84;
+
+        a {
+            display: block;
+            width: 100%;
+            color: #737B84;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    li.active {
+        a {
+            color: #007bff;
+        }
+    }
+}
+
+// General shit
+.greyed-out {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
